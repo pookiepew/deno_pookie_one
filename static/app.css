@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0e0e10;
+  color: #fff;
+}
+
+.main_nav {
+  display: flex;
+  height: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15rem;
+}
+
+.main_nav div h3 {
+  font-size: 2rem;
+}
+
+.main_nav__links ul {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+
+.main_nav__links ul li {
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.main_nav__links ul li:hover {
+  border-bottom: 2px solid red;
+  cursor: pointer;
+}

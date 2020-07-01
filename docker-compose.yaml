@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  deno:
+    image: "pookie/mvc_pookie_one"
+    container_name: "mvc_pookie_one"
+    build: .
+    restart: always
+    ports:
+      - "8000:8000"
+    networks:
+      - deno
+    volumes:
+      - ./static:/app/static
+
+networks:
+  deno: {}
