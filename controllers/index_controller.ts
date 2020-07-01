@@ -1,7 +1,6 @@
 import {
   RouterContext,
-  HttpError,
-  Status
+  HttpError
 } from 'https://deno.land/x/oak@v4.0.0/mod.ts'
 
 import { renderFileToString } from 'https://deno.land/x/dejs@0.7.0/mod.ts'

@@ -8,4 +8,4 @@ USER deno
 
 COPY . .
 
-CMD ["run", "--allow-net", "--allow-read", "app.ts"]
+CMD ["run", "--allow-net", "--allow-read", "--allow-write", "--allow-plugin", "--unstable", "app.ts"]
