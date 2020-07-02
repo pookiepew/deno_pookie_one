@@ -1,33 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %></title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="shared.css">
+<%- await include('views/templates/head.ejs', { title: title } ) %>
 </head>
+
 <body>
-  <header class="main_header">
-    <div class="main_header__content">
-      <div>
-        <a href="/">pookie.one</a>
-      </div>
-      <nav class="main_nav">
-        <ul class="main_nav__links">
-          <li class="main_nav__listitem">
-            <a href="https://github.com/pookiepew/deno_pookie_one" target="_blank">
-              Github Repo
-            </a>
-          </li>
-          <li class="main_nav__listitem">
-            <a href="/projects">
-              My Projects
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-</body>
-</html>
+  <%- await include('views/templates/navbar.ejs') %>
+
+<%- await include('views/templates/footer.ejs') %>

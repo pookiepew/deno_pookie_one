@@ -2,12 +2,10 @@ import { Router } from 'https://deno.land/x/oak@v4.0.0/mod.ts'
 
 import { renderIndex } from '../controllers/index_controller.ts'
 
-const router = new Router();
+const router = new Router()
 
 // INDEX
-router.get('/', renderIndex);
-
-
+router.get( '/', renderIndex )
 
 // // READ - single element
 // router.get('/:goalId', getSingleGoal);
