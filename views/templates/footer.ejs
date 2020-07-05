@@ -26,7 +26,7 @@
     if ( payload.action === 'ping' ) {
       const start = payload.start
       const time = Date.now() - start
-      console.log(time)
+      console.log('Round trip ',time, ' ms')
     }
     
   }
