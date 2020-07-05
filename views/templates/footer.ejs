@@ -1,6 +1,48 @@
-<footer>
-  
+<footer class="footer">
+  <div class="footer_content">
+    <div class="ws_connectivity">
+      <div class="ws_connectivity__light"></div>
+      <p>Websocket connection</p>
+    </div>
+    <h3>Copyright pookie &copy;</h3>
+    <div>
+      mail@pookie.one
+    </div>
+  </div>
 </footer>
+
+<script>
+  let ws = new WebSocket('ws://192.168.117.217:8000/ws')
+
+  const wsLight = document.querySelector('.ws_connectivity__light')
+  
+  ws.onopen = ev => {
+    wsLight.style.backgroundColor = "#41f831"
+  }
+
+  ws.onmessage = msg => {
+    const payload = JSON.parse(msg.data)
+    
+    if ( payload.action === 'ping' ) {
+      const start = payload.start
+      const time = Date.now() - start
+      console.log(time)
+    }
+    
+  }
+
+
+  setInterval(() => {
+    ws.send(JSON.stringify({
+      action: 'ping',
+      message: 'pong?',
+      start: Date.now()
+    }))
+  },5000)
+
+  ws.onerror = error => console.error(error)
+  
+</script>
   
 </body>
 </html>

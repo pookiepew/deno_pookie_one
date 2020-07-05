@@ -1,16 +1,21 @@
 import { 
-  Application, 
+  Application,
   send,
   isHttpError
 }  from "https://deno.land/x/oak@v4.0.0/mod.ts"
-import { renderFileToString } from 'https://deno.land/x/dejs@0.7.0/mod.ts'
 
-import indexRoute from './routes/index_route.ts'
+import { 
+  renderFileToString
+} from 'https://deno.land/x/dejs@0.7.0/mod.ts'
+
+import {
+  connect
+} from './helpers/db.ts'
+
+import indexRoute    from './routes/index_route.ts'
 
 import projectsRoute from './routes/projects_route.ts'
 
-
-import { connect } from './helpers/db.ts'
 
 connect()
 

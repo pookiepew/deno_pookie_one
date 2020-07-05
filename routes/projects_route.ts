@@ -6,4 +6,4 @@ const router = new Router()
 
 router.get( '/projects', renderProjects )
 
-export default router;
+export default router
